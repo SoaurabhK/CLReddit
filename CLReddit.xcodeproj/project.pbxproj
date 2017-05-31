@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		B5480A541EDE8D6500A9FDE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5480A531EDE8D6500A9FDE2 /* AppDelegate.swift */; };
-		B5480A561EDE8D6500A9FDE2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5480A551EDE8D6500A9FDE2 /* ViewController.swift */; };
 		B5480A591EDE8D6500A9FDE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5480A571EDE8D6500A9FDE2 /* Main.storyboard */; };
 		B5480A5B1EDE8D6500A9FDE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5480A5A1EDE8D6500A9FDE2 /* Assets.xcassets */; };
 		B5480A5E1EDE8D6500A9FDE2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5480A5C1EDE8D6500A9FDE2 /* LaunchScreen.storyboard */; };
 		B5480A691EDE8D6500A9FDE2 /* CLRedditTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5480A681EDE8D6500A9FDE2 /* CLRedditTests.swift */; };
+		B5480A741EDE92E300A9FDE2 /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5480A731EDE92E300A9FDE2 /* PostsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +28,6 @@
 /* Begin PBXFileReference section */
 		B5480A501EDE8D6500A9FDE2 /* CLReddit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CLReddit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5480A531EDE8D6500A9FDE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B5480A551EDE8D6500A9FDE2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B5480A581EDE8D6500A9FDE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B5480A5A1EDE8D6500A9FDE2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B5480A5D1EDE8D6500A9FDE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +35,7 @@
 		B5480A641EDE8D6500A9FDE2 /* CLRedditTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CLRedditTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5480A681EDE8D6500A9FDE2 /* CLRedditTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLRedditTests.swift; sourceTree = "<group>"; };
 		B5480A6A1EDE8D6500A9FDE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5480A731EDE92E300A9FDE2 /* PostsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				B5480A531EDE8D6500A9FDE2 /* AppDelegate.swift */,
-				B5480A551EDE8D6500A9FDE2 /* ViewController.swift */,
+				B5480A731EDE92E300A9FDE2 /* PostsViewController.swift */,
 				B5480A571EDE8D6500A9FDE2 /* Main.storyboard */,
 				B5480A5A1EDE8D6500A9FDE2 /* Assets.xcassets */,
 				B5480A5C1EDE8D6500A9FDE2 /* LaunchScreen.storyboard */,
@@ -199,7 +199,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5480A561EDE8D6500A9FDE2 /* ViewController.swift in Sources */,
+				B5480A741EDE92E300A9FDE2 /* PostsViewController.swift in Sources */,
 				B5480A541EDE8D6500A9FDE2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -404,6 +404,7 @@
 				B5480A6F1EDE8D6500A9FDE2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B5480A701EDE8D6500A9FDE2 /* Build configuration list for PBXNativeTarget "CLRedditTests" */ = {
 			isa = XCConfigurationList;
@@ -412,6 +413,7 @@
 				B5480A721EDE8D6500A9FDE2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
