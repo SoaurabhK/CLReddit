@@ -14,16 +14,16 @@
         <scene sceneID="fB3-V2-J3z">
             <objects>
                 <tableViewController id="b7Y-7W-UZX" customClass="PostsViewController" customModule="CLReddit" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" id="LaK-qm-RdF">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" id="LaK-qm-RdF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="70" id="eJp-gC-BFI" customClass="PostCell" customModule="CLReddit" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="70" id="eJp-gC-BFI" customClass="PostCell" customModule="CLReddit" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eJp-gC-BFI" id="gVz-t0-ljw">
-                                    <rect key="frame" x="0.0" y="0.0" width="342" height="69"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="69"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kdv-jL-guW">
@@ -43,7 +43,7 @@
                                             <state key="normal" title="Downvote"/>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="49K-wM-eim">
-                                            <rect key="frame" x="301" y="8" width="33" height="16"/>
+                                            <rect key="frame" x="334" y="8" width="33" height="16"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -75,11 +75,40 @@
                             <outlet property="delegate" destination="b7Y-7W-UZX" id="jmK-mT-Mmg"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Reddit" id="ywz-wm-rdm"/>
+                    <navigationItem key="navigationItem" title="Reddit" id="ywz-wm-rdm">
+                        <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="5mc-F0-11t">
+                            <connections>
+                                <action selector="reloadTable:" destination="b7Y-7W-UZX" id="3gW-Os-NVm"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="fOX-kG-hWY">
+                            <connections>
+                                <segue destination="O7g-tV-mgA" kind="show" id="MNb-SN-l0L"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cTe-Yl-SCY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1000.8" y="136.28185907046478"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="W0k-Io-qoL">
+            <objects>
+                <viewController id="O7g-tV-mgA" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xJt-bH-bTj"/>
+                        <viewControllerLayoutGuide type="bottom" id="25U-zr-YMe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7Ur-WN-WLK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="la9-PU-mPh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1726" y="136"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fv8-pd-boE">

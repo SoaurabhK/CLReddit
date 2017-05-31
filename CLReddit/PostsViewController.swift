@@ -23,13 +23,21 @@ class PostsViewController: UITableViewController {
         super.viewWillAppear(animated)
         
         //Sort all the posts and reload table
-        sortedPosts = postStore.sortedPosts
-        tableView.reloadData()
+        self.sortAndReloadTableView()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func reloadTable(_ sender: UIBarButtonItem) {
+        self.sortAndReloadTableView()
+    }
+    
+    func sortAndReloadTableView()  {
+        sortedPosts = postStore.sortedPosts
+        tableView.reloadData()
     }
     
     func upvote(sender:UIButton) {
