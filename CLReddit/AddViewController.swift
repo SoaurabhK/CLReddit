@@ -8,6 +8,8 @@
 
 import UIKit
 
+let maxTitleLength = 255
+
 class AddViewController: UIViewController, UITextFieldDelegate {
     var postStore: PostStore!
     
@@ -50,7 +52,7 @@ class AddViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: - Add Post
     @IBAction func addPost(_ sender: UIBarButtonItem) {
-        if let text = titleField.text, text.characters.count > 0, text.characters.count <= 255 {
+        if let text = titleField.text, text.characters.count > 0, text.characters.count <= maxTitleLength {
             postStore.createPost(title: text)
         }
         
@@ -93,7 +95,7 @@ extension AddViewController {
         // Done button is only enabled if final text length is greater than zero.
         self.doneBtn.isEnabled = (finalLength > 0) ? true : false
         
-        if finalLength > 255 {
+        if finalLength > maxTitleLength {
             errorLabel.isHidden = false
             errorLabel.text = "Title cannot be more than 255 characters!"
             return false

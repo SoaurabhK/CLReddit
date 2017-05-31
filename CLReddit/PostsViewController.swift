@@ -8,6 +8,8 @@
 
 import UIKit
 
+let estimatedRowHeight:CGFloat = 70
+
 class PostsViewController: UITableViewController {
     var postStore: PostStore!
     var sortedPosts:[Post] = []
@@ -16,7 +18,7 @@ class PostsViewController: UITableViewController {
         super.viewDidLoad()
         
         tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 70
+        tableView.estimatedRowHeight = estimatedRowHeight
     }
     
     override func viewWillAppear(_ animated: Bool) {
