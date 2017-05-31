@@ -84,7 +84,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="fOX-kG-hWY">
                             <connections>
-                                <segue destination="O7g-tV-mgA" kind="show" identifier="addItem" id="ebQ-JF-1DV"/>
+                                <segue destination="O7g-tV-mgA" kind="show" identifier="addPost" id="ebQ-JF-1DV"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

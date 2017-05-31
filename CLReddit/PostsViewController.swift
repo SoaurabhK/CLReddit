@@ -36,7 +36,12 @@ class PostsViewController: UITableViewController {
     }
     
     func sortAndReloadTableView()  {
-        sortedPosts = postStore.sortedPosts
+        
+        //Sorting the posts by votes and if two posts have same votes then sorting them by their titles.
+        let votesSortDescriptor = NSSortDescriptor(key: "votes", ascending: false)
+        let titleSortDescriptor = NSSortDescriptor(key: "title", ascending: true, selector: #selector(NSString.localizedStandardCompare(_:)))
+        
+        sortedPosts = postStore.sortAllPosts([votesSortDescriptor, titleSortDescriptor])
         tableView.reloadData()
     }
     
@@ -44,7 +49,7 @@ class PostsViewController: UITableViewController {
         
         let postID = sender.tag
         if let post = postStore.post(forPostID: postID) {
-            post.votes += 1
+            post.upvote()
             self.reloadTableViewRows(sender)
         }
         
@@ -54,7 +59,7 @@ class PostsViewController: UITableViewController {
         
         let postID = sender.tag
         if let post = postStore.post(forPostID: postID) {
-            post.votes -= 1
+            post.downvote()
             self.reloadTableViewRows(sender)
         }
     }
@@ -76,7 +81,7 @@ class PostsViewController: UITableViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         switch segue.identifier {
-        case "addItem"?:
+        case "addPost"?:
             let addViewController = segue.destination as! AddViewController
             addViewController.postStore = postStore
             

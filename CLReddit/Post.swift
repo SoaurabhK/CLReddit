@@ -11,8 +11,8 @@ import UIKit
 class Post: NSObject {
     private static var postCount: Int = 0
     public private(set) var postID: Int
-    var title: String
-    var votes: Int
+    public private(set) var title: String
+    public private(set) var votes: Int
     
     init(title: String) {
         Post.postCount += 1
@@ -31,5 +31,13 @@ class Post: NSObject {
         self.init(title: randomTitle)
     }
     
+    //MARK: - Upvote and Downvote
+    func upvote() {
+        self.votes += 1
+    }
+    
+    func downvote() {
+        self.votes -= 1
+    }
     
 }
