@@ -31,6 +31,7 @@ class PostsViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // MARK: - Reload tableView
     @IBAction func reloadTable(_ sender: UIBarButtonItem) {
         self.sortAndReloadTableView()
     }
@@ -45,6 +46,7 @@ class PostsViewController: UITableViewController {
         tableView.reloadData()
     }
     
+    // MARK: - Upvote/Downvote
     func upvote(sender:UIButton) {
         
         let postID = sender.tag
@@ -74,9 +76,7 @@ class PostsViewController: UITableViewController {
 
 
     
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    // MARK: - Segues
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.

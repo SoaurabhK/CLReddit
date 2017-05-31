@@ -48,6 +48,7 @@ class AddViewController: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    // MARK: - Add Post
     @IBAction func addPost(_ sender: UIBarButtonItem) {
         if let text = titleField.text, text.characters.count > 0, text.characters.count <= 255 {
             postStore.createPost(title: text)
