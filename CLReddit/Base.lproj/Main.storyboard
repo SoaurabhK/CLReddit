@@ -83,7 +83,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="fOX-kG-hWY">
                             <connections>
-                                <segue destination="O7g-tV-mgA" kind="show" id="MNb-SN-l0L"/>
+                                <segue destination="O7g-tV-mgA" kind="show" identifier="addItem" id="ebQ-JF-1DV"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -92,10 +92,10 @@
             </objects>
             <point key="canvasLocation" x="1000.8" y="136.28185907046478"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Post-->
         <scene sceneID="W0k-Io-qoL">
             <objects>
-                <viewController id="O7g-tV-mgA" sceneMemberID="viewController">
+                <viewController id="O7g-tV-mgA" customClass="AddViewController" customModule="CLReddit" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xJt-bH-bTj"/>
                         <viewControllerLayoutGuide type="bottom" id="25U-zr-YMe"/>
@@ -103,12 +103,62 @@
                     <view key="view" contentMode="scaleToFill" id="7Ur-WN-WLK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WPB-AQ-mAa">
+                                <rect key="frame" x="16" y="94" width="33.5" height="20.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WXv-Fk-8ve">
+                                <rect key="frame" x="69.5" y="89" width="289.5" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mas-pc-Juu">
+                                <rect key="frame" x="69.5" y="134.5" width="75" height="18"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="WXv-Fk-8ve" firstAttribute="baseline" secondItem="WPB-AQ-mAa" secondAttribute="baseline" id="2Io-Pg-ShT"/>
+                            <constraint firstItem="mas-pc-Juu" firstAttribute="leading" secondItem="WXv-Fk-8ve" secondAttribute="leading" id="KDo-bk-sU9"/>
+                            <constraint firstItem="WPB-AQ-mAa" firstAttribute="top" secondItem="xJt-bH-bTj" secondAttribute="bottom" constant="30" id="NfT-i0-Pkx"/>
+                            <constraint firstItem="WPB-AQ-mAa" firstAttribute="leading" secondItem="7Ur-WN-WLK" secondAttribute="leadingMargin" id="kRa-pP-Pbc"/>
+                            <constraint firstItem="WXv-Fk-8ve" firstAttribute="leading" secondItem="WPB-AQ-mAa" secondAttribute="trailing" constant="20" id="oE9-FA-daa"/>
+                            <constraint firstItem="WXv-Fk-8ve" firstAttribute="trailing" secondItem="7Ur-WN-WLK" secondAttribute="trailingMargin" id="oRB-5r-pUU"/>
+                            <constraint firstItem="mas-pc-Juu" firstAttribute="top" secondItem="WXv-Fk-8ve" secondAttribute="bottom" constant="15" id="xZI-ld-ybj"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Nnh-tg-HGi" appends="YES" id="UtL-v5-n2T"/>
+                        </connections>
                     </view>
+                    <navigationItem key="navigationItem" title="Add Post" id="gg6-Fz-J0J">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="vFk-hE-18r">
+                            <connections>
+                                <action selector="addPost:" destination="O7g-tV-mgA" id="DkY-Xn-c6c"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="errorLabel" destination="mas-pc-Juu" id="dfN-19-H6W"/>
+                        <outlet property="titleField" destination="WXv-Fk-8ve" id="IFL-Gd-07V"/>
+                        <outlet property="titleLabel" destination="WPB-AQ-mAa" id="r6P-v2-Uh2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="la9-PU-mPh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Nnh-tg-HGi">
+                    <connections>
+                        <action selector="backgroundTapped:" destination="O7g-tV-mgA" id="w6g-gI-P5V"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1726" y="136"/>
+            <point key="canvasLocation" x="1725.5999999999999" y="135.38230884557723"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fv8-pd-boE">

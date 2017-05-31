@@ -68,15 +68,23 @@ class PostsViewController: UITableViewController {
     }
 
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        switch segue.identifier {
+        case "addItem"?:
+            let addViewController = segue.destination as! AddViewController
+            addViewController.postStore = postStore
+            
+        default:
+            preconditionFailure("Unexpected segue identifier.")
+        }
     }
-    */
+    
 
 }
 
