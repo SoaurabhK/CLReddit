@@ -9,20 +9,28 @@
 import Foundation
 
 class PostStore {
-    var allPosts: [Post] = []
+    fileprivate var allPostsWithIDs: [Int: Post] = [:]
+    var sortedPosts: [Post] {
+        return sortAllPosts()
+    }
     
     init() {
         for _ in 0..<20 {
-            allPosts.append(Post())
+            let post = Post()
+            allPostsWithIDs[post.postID] = post
         }
-        self.sortAllPosts()
+    }
+    
+    func post(forPostID postID: Int) -> Post? {
+        
+        return allPostsWithIDs[postID]
     }
     
     @discardableResult func createPost(title: String) -> Post {
         
         let post = Post(title: title)
-        allPosts.append(post)
-        
+        allPostsWithIDs[post.postID] = post
+    
         return post
     }
 
@@ -30,14 +38,14 @@ class PostStore {
 
 extension PostStore {
     
-    func sortAllPosts() {
+    func sortAllPosts() -> Array<Post> {
         
         //Sorting the posts by votes and if two posts have same votes then sorting them by their titles.
         let votesSortDescriptor = NSSortDescriptor(key: "votes", ascending: false)
         let titleSortDescriptor = NSSortDescriptor(key: "title", ascending: true, selector: #selector(NSString.localizedStandardCompare(_:)))
         
         //Force casting the result back to [Post] because we are sure about type here.
-        self.allPosts = (self.allPosts as NSArray).sortedArray(using: [votesSortDescriptor, titleSortDescriptor]) as! [Post]
+        return (Array(self.allPostsWithIDs.values) as NSArray).sortedArray(using: [votesSortDescriptor, titleSortDescriptor]) as! [Post]
         
     }
 
