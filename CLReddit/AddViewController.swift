@@ -14,6 +14,7 @@ class AddViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var titleField: UITextField!
     
+    @IBOutlet var doneBtn: UIBarButtonItem!
     @IBOutlet var errorLabel: UILabel!
     
     override func viewDidLoad() {
@@ -21,6 +22,10 @@ class AddViewController: UIViewController, UITextFieldDelegate {
 
         // Do any additional setup after loading the view.
         errorLabel.isHidden = true
+        self.doneBtn.isEnabled = false
+        
+        //Set titleField delegate to self
+        titleField.delegate = self
         
         NotificationCenter.default.addObserver(forName: .UIContentSizeCategoryDidChange, object: nil, queue: .main) { [weak self] notification in
             self?.titleField.font = .preferredFont(forTextStyle: .subheadline)
@@ -73,4 +78,27 @@ class AddViewController: UIViewController, UITextFieldDelegate {
  // MARK: - TextField Delegates
 extension AddViewController {
     
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        //To prevent "undo" bug
+        let currentCharacterCount = textField.text?.characters.count ?? 0
+        if (range.length + range.location > currentCharacterCount){
+            return false
+        }
+        
+        //Final text length should not be greater than 255 characters
+        let finalLength = currentCharacterCount + string.characters.count - range.length
+        
+        // Done button is only enabled if final text length is greater than zero.
+        self.doneBtn.isEnabled = (finalLength > 0) ? true : false
+        
+        if finalLength > 255 {
+            errorLabel.isHidden = false
+            errorLabel.text = "Title cannot be more than 255 characters!"
+            return false
+        } else {
+            errorLabel.isHidden = true
+        }
+        return true
+    }
 }
