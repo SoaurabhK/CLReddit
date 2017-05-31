@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -13,18 +14,60 @@
         <scene sceneID="fB3-V2-J3z">
             <objects>
                 <tableViewController id="b7Y-7W-UZX" customClass="PostsViewController" customModule="CLReddit" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="LaK-qm-RdF">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" id="LaK-qm-RdF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UITableViewCell" id="eJp-gC-BFI">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="70" id="eJp-gC-BFI" customClass="PostCell" customModule="CLReddit" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eJp-gC-BFI" id="gVz-t0-ljw">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="342" height="69"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kdv-jL-guW">
+                                            <rect key="frame" x="8" y="8" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zak-16-F0y">
+                                            <rect key="frame" x="8" y="39.5" width="50" height="21.5"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                            <state key="normal" title="Upvote"/>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQu-Ms-5Vu">
+                                            <rect key="frame" x="70" y="39.5" width="69" height="21.5"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                            <state key="normal" title="Downvote"/>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="49K-wM-eim">
+                                            <rect key="frame" x="301" y="8" width="33" height="16"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="XQu-Ms-5Vu" firstAttribute="leading" secondItem="zak-16-F0y" secondAttribute="trailing" constant="12" id="1Tc-W0-dbz"/>
+                                        <constraint firstAttribute="topMargin" secondItem="49K-wM-eim" secondAttribute="top" id="1kH-4U-L1I"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="49K-wM-eim" secondAttribute="trailing" id="8qM-2d-eqL"/>
+                                        <constraint firstItem="Kdv-jL-guW" firstAttribute="top" secondItem="gVz-t0-ljw" secondAttribute="topMargin" id="Lze-j0-cju"/>
+                                        <constraint firstItem="XQu-Ms-5Vu" firstAttribute="baseline" secondItem="zak-16-F0y" secondAttribute="baseline" id="RwG-gy-ZGb"/>
+                                        <constraint firstAttribute="leadingMargin" secondItem="Kdv-jL-guW" secondAttribute="leading" id="WbE-Cv-HCG"/>
+                                        <constraint firstItem="zak-16-F0y" firstAttribute="top" secondItem="Kdv-jL-guW" secondAttribute="bottom" constant="10.5" id="ZR7-sg-xiN"/>
+                                        <constraint firstItem="zak-16-F0y" firstAttribute="leading" secondItem="Kdv-jL-guW" secondAttribute="leading" id="hwF-O0-zFk"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="zak-16-F0y" secondAttribute="bottom" constant="0.5" id="sZ3-Gg-i4N"/>
+                                        <constraint firstItem="zak-16-F0y" firstAttribute="height" secondItem="XQu-Ms-5Vu" secondAttribute="height" id="v8o-yb-A2c"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="downvoteBtn" destination="XQu-Ms-5Vu" id="FQ0-ff-Jx0"/>
+                                    <outlet property="titleLabel" destination="Kdv-jL-guW" id="N3o-ad-j19"/>
+                                    <outlet property="upvoteBtn" destination="zak-16-F0y" id="90y-nr-5Yy"/>
+                                    <outlet property="votesLabel" destination="49K-wM-eim" id="pAd-Sk-m6z"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

@@ -13,6 +13,7 @@
 		B5480A5E1EDE8D6500A9FDE2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5480A5C1EDE8D6500A9FDE2 /* LaunchScreen.storyboard */; };
 		B5480A691EDE8D6500A9FDE2 /* CLRedditTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5480A681EDE8D6500A9FDE2 /* CLRedditTests.swift */; };
 		B5480A741EDE92E300A9FDE2 /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5480A731EDE92E300A9FDE2 /* PostsViewController.swift */; };
+		B5480A761EDEA60B00A9FDE2 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5480A751EDEA60B00A9FDE2 /* PostCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		B5480A681EDE8D6500A9FDE2 /* CLRedditTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLRedditTests.swift; sourceTree = "<group>"; };
 		B5480A6A1EDE8D6500A9FDE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5480A731EDE92E300A9FDE2 /* PostsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
+		B5480A751EDEA60B00A9FDE2 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			children = (
 				B5480A531EDE8D6500A9FDE2 /* AppDelegate.swift */,
 				B5480A731EDE92E300A9FDE2 /* PostsViewController.swift */,
+				B5480A751EDEA60B00A9FDE2 /* PostCell.swift */,
 				B5480A571EDE8D6500A9FDE2 /* Main.storyboard */,
 				B5480A5A1EDE8D6500A9FDE2 /* Assets.xcassets */,
 				B5480A5C1EDE8D6500A9FDE2 /* LaunchScreen.storyboard */,
@@ -201,6 +204,7 @@
 			files = (
 				B5480A741EDE92E300A9FDE2 /* PostsViewController.swift in Sources */,
 				B5480A541EDE8D6500A9FDE2 /* AppDelegate.swift in Sources */,
+				B5480A761EDEA60B00A9FDE2 /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,7 +286,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -325,7 +329,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
