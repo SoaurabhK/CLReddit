@@ -14,6 +14,8 @@
 		B5480A691EDE8D6500A9FDE2 /* CLRedditTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5480A681EDE8D6500A9FDE2 /* CLRedditTests.swift */; };
 		B5480A741EDE92E300A9FDE2 /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5480A731EDE92E300A9FDE2 /* PostsViewController.swift */; };
 		B5480A761EDEA60B00A9FDE2 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5480A751EDEA60B00A9FDE2 /* PostCell.swift */; };
+		B5480A781EDECE0700A9FDE2 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5480A771EDECE0700A9FDE2 /* Post.swift */; };
+		B5480A7A1EDED24500A9FDE2 /* PostStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5480A791EDED24500A9FDE2 /* PostStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		B5480A6A1EDE8D6500A9FDE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5480A731EDE92E300A9FDE2 /* PostsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
 		B5480A751EDEA60B00A9FDE2 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		B5480A771EDECE0700A9FDE2 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		B5480A791EDED24500A9FDE2 /* PostStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +86,8 @@
 				B5480A531EDE8D6500A9FDE2 /* AppDelegate.swift */,
 				B5480A731EDE92E300A9FDE2 /* PostsViewController.swift */,
 				B5480A751EDEA60B00A9FDE2 /* PostCell.swift */,
+				B5480A771EDECE0700A9FDE2 /* Post.swift */,
+				B5480A791EDED24500A9FDE2 /* PostStore.swift */,
 				B5480A571EDE8D6500A9FDE2 /* Main.storyboard */,
 				B5480A5A1EDE8D6500A9FDE2 /* Assets.xcassets */,
 				B5480A5C1EDE8D6500A9FDE2 /* LaunchScreen.storyboard */,
@@ -205,6 +211,8 @@
 				B5480A741EDE92E300A9FDE2 /* PostsViewController.swift in Sources */,
 				B5480A541EDE8D6500A9FDE2 /* AppDelegate.swift in Sources */,
 				B5480A761EDEA60B00A9FDE2 /* PostCell.swift in Sources */,
+				B5480A7A1EDED24500A9FDE2 /* PostStore.swift in Sources */,
+				B5480A781EDECE0700A9FDE2 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

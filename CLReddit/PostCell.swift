@@ -10,8 +10,8 @@ import UIKit
 
 class PostCell: UITableViewCell {
 
-    @IBOutlet var titleLabel:UILabel!
-    @IBOutlet var votesLabel:UILabel!
+    @IBOutlet var titleLabel: UILabel!
+    @IBOutlet var votesLabel: UILabel!
     @IBOutlet var upvoteBtn: UIButton!
     @IBOutlet var downvoteBtn: UIButton!
     
