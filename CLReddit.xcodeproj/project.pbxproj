@@ -85,16 +85,11 @@
 		B5480A521EDE8D6500A9FDE2 /* CLReddit */ = {
 			isa = PBXGroup;
 			children = (
-				B5480A531EDE8D6500A9FDE2 /* AppDelegate.swift */,
-				B5480A731EDE92E300A9FDE2 /* PostsViewController.swift */,
-				B5480A751EDEA60B00A9FDE2 /* PostCell.swift */,
-				B5480A771EDECE0700A9FDE2 /* Post.swift */,
-				B5480A791EDED24500A9FDE2 /* PostStore.swift */,
-				B5480A7B1EDF16E900A9FDE2 /* AddViewController.swift */,
-				B5480A571EDE8D6500A9FDE2 /* Main.storyboard */,
-				B5480A5A1EDE8D6500A9FDE2 /* Assets.xcassets */,
-				B5480A5C1EDE8D6500A9FDE2 /* LaunchScreen.storyboard */,
-				B5480A5F1EDE8D6500A9FDE2 /* Info.plist */,
+				B5480A7D1EE0942D00A9FDE2 /* Model */,
+				B5480A7E1EE0943600A9FDE2 /* View */,
+				B5480A7F1EE0943E00A9FDE2 /* Controller */,
+				B5480A801EE0944700A9FDE2 /* Store */,
+				B5480A811EE0965600A9FDE2 /* Resources */,
 			);
 			path = CLReddit;
 			sourceTree = "<group>";
@@ -106,6 +101,51 @@
 				B5480A6A1EDE8D6500A9FDE2 /* Info.plist */,
 			);
 			path = CLRedditTests;
+			sourceTree = "<group>";
+		};
+		B5480A7D1EE0942D00A9FDE2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B5480A771EDECE0700A9FDE2 /* Post.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		B5480A7E1EE0943600A9FDE2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B5480A751EDEA60B00A9FDE2 /* PostCell.swift */,
+				B5480A571EDE8D6500A9FDE2 /* Main.storyboard */,
+				B5480A5C1EDE8D6500A9FDE2 /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		B5480A7F1EE0943E00A9FDE2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B5480A531EDE8D6500A9FDE2 /* AppDelegate.swift */,
+				B5480A731EDE92E300A9FDE2 /* PostsViewController.swift */,
+				B5480A7B1EDF16E900A9FDE2 /* AddViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		B5480A801EE0944700A9FDE2 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				B5480A791EDED24500A9FDE2 /* PostStore.swift */,
+			);
+			name = Store;
+			sourceTree = "<group>";
+		};
+		B5480A811EE0965600A9FDE2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B5480A5A1EDE8D6500A9FDE2 /* Assets.xcassets */,
+				B5480A5F1EDE8D6500A9FDE2 /* Info.plist */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
