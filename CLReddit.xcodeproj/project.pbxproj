@@ -30,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B528E9C11EE2EAEA004F1FD1 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B5480A501EDE8D6500A9FDE2 /* CLReddit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CLReddit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5480A531EDE8D6500A9FDE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5480A581EDE8D6500A9FDE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -142,6 +143,7 @@
 		B5480A811EE0965600A9FDE2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B528E9C11EE2EAEA004F1FD1 /* README.md */,
 				B5480A5A1EDE8D6500A9FDE2 /* Assets.xcassets */,
 				B5480A5F1EDE8D6500A9FDE2 /* Info.plist */,
 			);
