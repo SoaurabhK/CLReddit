@@ -14,8 +14,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        
+       
+        // Passing PostStore as a dependency to PostsViewController on application launch.
         let postStore = PostStore()
         let navController = window!.rootViewController as! UINavigationController
         let postsController = navController.topViewController as! PostsViewController
